@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+'''
+This is the base view in the application. It includes
+routes that require working with all the models in the
+storage
+'''
 from api.v1.views import app_views
 from flask import make_response
 import json

@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+'''
+This module instantiates Flask and serves as the main
+entry point of the web application.
+'''
 from os import environ
 from flask import Flask, make_response
 from models import storage
@@ -28,4 +32,4 @@ def page_not_found(e):
 if __name__ == '__main__':
     hostip = environ.get('HBNB_API_HOST', '0.0.0.0')
     theport = environ.get('HBNB_API_PORT', 5000)
-    app.run(host=hostip, port=theport, threaded=True)
+    app.run(host=hostip, port=theport, threaded=True, debug=True)
